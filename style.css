@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family:fantasy;
     font-size: 16px;
     line-height: 1;
   }
@@ -28,6 +28,7 @@ body {
   .time-block {
     text-align: center;
     border-radius: 15px;
+    background-color: #89bad2;
   }
   
   .row {
@@ -37,9 +38,11 @@ body {
   }
   
   .hour {
-    background-color: #ffffff;
+    background-color: #1d99ce;
     color: #000000;
     border-top: 1px dashed #000000;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
   }
   
   .past {
@@ -48,7 +51,7 @@ body {
   }
   
   .present {
-    background-color: #ff6961;
+    background-color: #61daff;
     color: white;
   }
   
@@ -61,12 +64,13 @@ body {
     border-left: 1px solid black;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: #06aed5;
+    background-color: #2206d5;
     color: white;
   }
   
   .saveBtn i:hover {
     font-size: 20px;
     transition: all 0.3s ease-in-out;
+    text-shadow: #61daff;
   }
   
