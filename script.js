@@ -57,35 +57,6 @@ init();
 // THEN each timeblock is color coded to indicate whether it is in the past, present, or future
 
 
-function displayTime() {
-    var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
-    timeDisplayEl.text(rightNow);
-  }
 
-  function updateColour() {
-    // Sets interval in variable
-  
-  var currentHour = moment().hours();
-  
-  $('.time-colour').each(function () {
-      var hourColour = parseInt($(this).attr('id').split('-')[1]);
-  
-      // check if we've moved past this time
-      if (hourColour < currentHour) {
-          $(this).addClass("#past");
-        } else if (hourColour === currentHour) {
-          $(this).removeClass("#past");
-          $(this).addClass("#present");
-        } else {
-          $(this).removeClass("#past");
-          $(this).removeClass("#present");
-          $(this).addClass("#future");
-        }
-      });
-    }
-  
-  
-  updateColour()
 
-    // set up interval to check if current time needs to be updated
-    var interval = setInterval(updateColour, 15000);
+  
