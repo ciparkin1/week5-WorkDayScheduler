@@ -57,6 +57,21 @@ init();
 // THEN each timeblock is color coded to indicate whether it is in the past, present, or future
 
 
+var currentHour = Date.now().getHours();
 
+function trackHour(){ 
+$('.time-colour').each(function(){
+    var val = parseInt($(this).prop('id'));
+    if(val > currentHour && val < currentHour+6){
+        $(this).css('background-color','Blue');
+    }else if(val < currentHour && val > currentHour-6){
+        $(this).css('background-color','Red');
+    }else if(val === currentHour){
+        $(this).css('background-color','Green');
+    }else{
+        $(this).css('background-color','White');
+    }
+});
+}
 
-  
+  trackHour()
