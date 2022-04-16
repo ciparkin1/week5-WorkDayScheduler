@@ -15,12 +15,19 @@ body {
   
   .jumbotron {
     text-align: center;
-    background-color: transparent;
+    background-color: rgb(47, 47, 49);
     color: black;
     border-radius: 0;
     border-bottom: 10px solid black;
   }
+  marquee{
+    color: #89bad2;
+    background-color: #61daff;
+    font-size: 16px;
+    font-family: fantasy;
+    line-height: 25px;
   
+  }
   .description {
     white-space: pre-wrap;
   }
