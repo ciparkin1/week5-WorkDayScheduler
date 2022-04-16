@@ -1,7 +1,22 @@
 body {
-    font-family:fantasy;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 16px;
     line-height: 1;
+  }
+
+  lead{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   
+  }
+
+  p{
+    color: #d3d3d3;
+
+  }
+
+  h1{
+    text-shadow: #d3d3d3;
+
   }
   
   textarea {
@@ -15,16 +30,16 @@ body {
   
   .jumbotron {
     text-align: center;
-    background-color: rgb(84, 84, 101);
+    background-color: rgb(70, 70, 81);
     color: black;
     border-radius: 0;
     border-bottom: 10px solid black;
   }
   marquee{
-    color: #89bad2;
-    background-color: #61daff;
+    color: #8f58e8;
+    background-color: #3c51c9;
     font-size: 16px;
-    font-family: fantasy;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     line-height: 25px;
   
   }
@@ -35,7 +50,7 @@ body {
   .time-colour {
     text-align: center;
     border-radius: 15px;
-    background-color: #89bad2;
+    background-color: #5e71ce;
   }
   
   .row {
@@ -45,8 +60,8 @@ body {
   }
   
   .hour {
-    background-color: #1d99ce;
-    color: #000000;
+    background-color: #731f8c;
+    color: #e8e488;
     border-top: 1px dashed #000000;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;

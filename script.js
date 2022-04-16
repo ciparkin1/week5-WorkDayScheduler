@@ -72,6 +72,5 @@ $('.time-colour').each(function(){
         $(this).css('background-color','White');
     }
 });
-}
 
-  trackHour()
+  trackHour()}
