@@ -15,41 +15,43 @@ document.getElementById('time').innerHTML= today.toDateString();
 // WHEN I refresh the page
 // THEN the saved events persist
 
-var comment = document.getElementById("input");
-var saveButton = document.getElementById("save");
+// var comment = document.getElementById("input");
+var scheduler = document.getElementById("scheduler");
 
-function saveComment() {
+function saveComment(hourTag) {
   // Save related form data as an object
-  var hourlyComment = {
-    comment: comment.value.trim()
-  };
-  // Use .setItem() to store object in storage and JSON.stringify to convert it as a string
-  localStorage.setItem("hourlyComment", JSON.stringify(hourlyComment));
-}
+  // var hourlyComment = {
+  //   comment: comment.value.trim()
+  // };
 
+  var comment = document.getElementById(hourTag + '-comment');
+  // // Use .setItem() to store object in storage and JSON.stringify to convert it as a string
+  localStorage.setItem(hourTag, comment.value);
+}
 function renderComment() {
   // Use JSON.parse() to convert text to JavaScript object
-  var lastComment = JSON.parse(localStorage.getItem("hourlyComment"));
-  // Check if data is returned, if not exit out of the function
-  if (lastComment !== null) {
-  document.getElementById("input").innerHTML = lastComment.comment;
-  } else {
-    return;
+  // var lastComment = JSON.parse(localStorage.getItem(hourTag));
+  for (var i = 0; i < localStorage.length; i++){
+      var hour = localStorage.getItem(localStorage.key(i));
   }
+  // Check if data is returned, if not exit out of the function
+  if (scheduler){
+    localStorage.getItem.comment;
+  
 }
-
-saveButton.addEventListener("click", function(event) {
-event.preventDefault();
-saveComment();
-renderComment();
+scheduler.addEventListener("click", function(event) {
+  var target = event.target;
+  event.preventDefault();
+  saveComment(target.parentElement.id);
+  renderComment();
 });
 
-// The init() function fires when the page is loaded 
-function init() {
-  // When the init function is executed, the code inside renderLastGrade function will also execute
-  renderComment();
-}
-init();
+// // The init() function fires when the page is loaded 
+// function init() {
+//   // When the init function is executed, the code inside renderLastGrade function will also execute
+//   renderComment();
+// }
+// init();
 
 
 
