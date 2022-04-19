@@ -19,26 +19,20 @@ document.getElementById('time').innerHTML= today.toDateString();
 var scheduler = document.getElementById("scheduler");
 
 function saveComment(hourTag) {
-  // Save related form data as an object
-  // var hourlyComment = {
-  //   comment: comment.value.trim()
-  // };
 
   var comment = document.getElementById(hourTag + '-comment');
-  // // Use .setItem() to store object in storage and JSON.stringify to convert it as a string
   localStorage.setItem(hourTag, comment.value);
 }
+
 function renderComment() {
-  // Use JSON.parse() to convert text to JavaScript object
-  // var lastComment = JSON.parse(localStorage.getItem(hourTag));
   for (var i = 0; i < localStorage.length; i++){
       var hour = localStorage.getItem(localStorage.key(i));
-  }
+      var comment = document.getElementById(localStorage.key(i) + "-comment")
+      comment.innerHTML = hour
+     }
   // Check if data is returned, if not exit out of the function
-  if (scheduler){
-    localStorage.getItem.comment;
-  
-}
+
+
 scheduler.addEventListener("click", function(event) {
   var target = event.target;
   event.preventDefault();
@@ -46,33 +40,21 @@ scheduler.addEventListener("click", function(event) {
   renderComment();
 });
 
-// // The init() function fires when the page is loaded 
-// function init() {
-//   // When the init function is executed, the code inside renderLastGrade function will also execute
-//   renderComment();
-// }
-// init();
+
+  var hour9text = localStorage.getItem("hour-9");
+  var hour10text = localStorage.getItem("hour-10");
+  var hour11text = localStorage.getItem("hour-11");
+  var hour12text = localStorage.getItem("hour-12");
+  var hour13text = localStorage.getItem("hour-13");
+  var hour14text = localStorage.getItem("hour-14");
+  var hour15text = localStorage.getItem("hour-15");
+  var hour16text = localStorage.getItem("hour-16");
+  var hour17text = localStorage.getItem("hour-17");
+
+}
+
 
 
 
 // WHEN I view the timeblocks for that day
 // THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-
-
-var currentHour = Date.now().getHours();
-
-function trackHour(){ 
-$('.time-colour').each(function(){
-    var val = parseInt($(this).prop('id'));
-    if(val > currentHour && val < currentHour+6){
-        $(this).css('background-color','Blue');
-    }else if(val < currentHour && val > currentHour-6){
-        $(this).css('background-color','Red');
-    }else if(val === currentHour){
-        $(this).css('background-color','Green');
-    }else{
-        $(this).css('background-color','White');
-    }
-});
-
-  trackHour()}
