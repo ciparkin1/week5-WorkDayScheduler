@@ -27,34 +27,15 @@ function saveComment(hourTag) {
 function renderComment() {
   for (var i = 0; i < localStorage.length; i++){
       var hour = localStorage.getItem(localStorage.key(i));
-      var comment = document.getElementById(localStorage.key(i) + "-comment")
+      var comment = document.getElementById(localStorage.key(i) + '-comment')
       comment.innerHTML = hour
      }
-  // Check if data is returned, if not exit out of the function
-
-
+  }
 scheduler.addEventListener("click", function(event) {
+
   var target = event.target;
   event.preventDefault();
   saveComment(target.parentElement.id);
-  renderComment();
-});
+})
 
-
-  var hour9text = localStorage.getItem("hour-9");
-  var hour10text = localStorage.getItem("hour-10");
-  var hour11text = localStorage.getItem("hour-11");
-  var hour12text = localStorage.getItem("hour-12");
-  var hour13text = localStorage.getItem("hour-13");
-  var hour14text = localStorage.getItem("hour-14");
-  var hour15text = localStorage.getItem("hour-15");
-  var hour16text = localStorage.getItem("hour-16");
-  var hour17text = localStorage.getItem("hour-17");
-
-}
-
-
-
-
-// WHEN I view the timeblocks for that day
-// THEN each timeblock is color coded to indicate whether it is in the past, present, or future
+renderComment();
